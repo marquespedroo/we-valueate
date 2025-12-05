@@ -51,10 +51,15 @@ const ContactSection: React.FC<ContactSectionProps> = ({ onOpenCareers, onOpenBl
             Contato via Email
           </button>
 
-          <button className="w-full md:w-auto px-8 py-4 bg-transparent border border-background text-background font-sans text-sm tracking-widest uppercase hover:bg-background hover:text-white transition-all flex items-center justify-center gap-3">
+          <a
+            href="https://wa.me/556194420202"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto px-8 py-4 bg-transparent border border-background text-background font-sans text-sm tracking-widest uppercase hover:bg-background hover:text-white transition-all flex items-center justify-center gap-3"
+          >
             <MessageSquare className="w-4 h-4" />
             WhatsApp Business
-          </button>
+          </a>
         </motion.div>
       </div>
 

@@ -26,7 +26,9 @@ const Navbar: React.FC = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'glass-nav h-20' : 'bg-transparent h-24'
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${isScrolled
+            ? 'bg-background/70 backdrop-blur-[20px] border-white/5 h-20'
+            : 'bg-transparent border-transparent h-24'
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
