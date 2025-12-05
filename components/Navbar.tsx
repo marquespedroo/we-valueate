@@ -15,9 +15,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navItems = [
-    { label: 'Expertise', href: '#expertise' },
     { label: 'Sobre', href: '#trust' },
-    { label: 'Contato', href: '#contact' }
+    { label: 'Expertise', href: '#expertise' },
+    { label: 'Contato', href: 'https://wa.me/556194420202', isExternal: true }
   ];
 
   return (
@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${isScrolled
-            ? 'bg-background/70 backdrop-blur-[20px] border-white/5 h-20'
-            : 'bg-transparent border-transparent h-24'
+          ? 'bg-background/70 backdrop-blur-[20px] border-white/5 h-20'
+          : 'bg-transparent border-transparent h-24'
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
@@ -45,6 +45,8 @@ const Navbar: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
+                target={item.isExternal ? '_blank' : undefined}
+                rel={item.isExternal ? 'noopener noreferrer' : undefined}
                 className="text-xs uppercase tracking-widest text-secondary hover:text-white transition-colors duration-300 relative group"
               >
                 {item.label}
@@ -84,6 +86,8 @@ const Navbar: React.FC = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
+                  target={item.isExternal ? '_blank' : undefined}
+                  rel={item.isExternal ? 'noopener noreferrer' : undefined}
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: i * 0.1 }}

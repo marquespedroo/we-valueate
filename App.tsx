@@ -192,23 +192,16 @@ export default function App() {
               </div>
               <div className="w-full md:w-1/3 bg-white/5 p-6 border border-white/10">
                 <h4 className="text-accent text-xs tracking-widest uppercase mb-4">Vagas Abertas</h4>
-                <ul className="space-y-4">
-                  <li className="text-white text-sm cursor-pointer hover:text-accent transition-colors flex justify-between">
-                    <span>Senior SecOps Engineer</span>
-                    <span className="opacity-50">Remoto</span>
-                  </li>
-                  <li className="text-white text-sm cursor-pointer hover:text-accent transition-colors flex justify-between">
-                    <span>Splunk Architect</span>
-                    <span className="opacity-50">Híbrido</span>
-                  </li>
-                  <li className="text-white text-sm cursor-pointer hover:text-accent transition-colors flex justify-between">
-                    <span>Cloud Specialist (AWS)</span>
-                    <span className="opacity-50">Remoto</span>
-                  </li>
-                </ul>
+                <div className="text-secondary text-sm italic mb-6">
+                  No momento, não temos posições em aberto.
+                  <br /><br />
+                  Siga-nos nas redes sociais para acompanhar novas oportunidades.
+                </div>
+                {/* 
                 <button className="w-full mt-6 py-2 border border-white/20 text-xs uppercase tracking-widest text-white hover:bg-white hover:text-black transition-all">
                   Enviar Currículo
-                </button>
+                </button> 
+                */}
               </div>
             </div>
           </div>
